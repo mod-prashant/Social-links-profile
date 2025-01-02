@@ -7,12 +7,17 @@
 }
 
 :root{
-    --font-base: 0.9rem; 
-    --font-small: 0.8rem;
+    --font-base: 1rem; 
+    --font-small: 0.75rem;
     --font-large: 1.3rem;
     --line-space: 1rem;
     --image-side: 5rem;
     --image-radius: 2.5rem;
+    --btn-padding: 0.7rem 5rem;
+    --btn-radius: 0.5rem;
+    --btn-spacing: 0.8rem;
+    --btn-weight: 600;
+    --transition: all 0.3s ease-in-out;
     --Green: hsl(75, 94%, 57%);
     --White: hsl(0, 0%, 100%);
     --Grey700: hsl(0, 0%, 20%);
@@ -42,9 +47,9 @@ main{
     background: var(--Grey800);
     border-radius: 0.7rem;
     overflow: hidden;
+    width: auto;
     max-width: 21rem;
     padding: 2rem;
-    padding-bottom: 1rem;
 }
 /* Card image*/
 .card-image img{
@@ -75,24 +80,38 @@ main{
     font-size: var(--font-small);
     margin-bottom: var(--line-space);
 }
-/* links */
-.links li{
-    display: block;
-    background: var(--Grey700);
-    font-size: var(--font-small);
-    font-weight: 700;
-    padding: 0.7rem 1rem;
-    margin-bottom: var(--line-space);
-    border-radius: 0.5rem;
+/* links */.links {
+    display: grid;
+    gap: var(--btn-spacing);
 }
-.links a{
-    text-decoration: none; 
+
+.links li {
+    list-style: none;
+}
+
+.links a {
+    display: grid;
+    place-items: center;
+    text-decoration: none;
     color: var(--White);
-    display: block;
+    font-size: var(--font-small);
+    font-weight: var(--btn-weight);
+    background: var(--Grey700);
+    padding: var(--btn-padding);
+    border-radius: var(--btn-radius);
+    transition: var(--transition);
 }
-.links li:hover{
+
+.links a:hover {
     background: var(--Green);
+    color: var(--Grey900);
+    transform: translateY(-0.2rem);
 }
+
+.links a:active {
+    transform: scale(1.2);
+}
+
 
 /* Footer */
 footer {
