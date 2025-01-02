@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Inter;
+    src: url(/assets/fonts/OFL.txt);
+}
+:root{
+    --font-base: 1rem; 
+    --font-large: 1.25rem;
+    --line-space: 0.7rem;
+    --image-side: 5rem;
+    --image-radius: 2.5rem;
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey700: hsl(0, 0%, 20%);
+    --Grey800: hsl(0, 0%, 12%);
+    --Grey900: hsl(0, 0%, 8%);
+}
+
+body{
+    display: grid;
+    grid-template-rows: 1fr;
+    min-height: 100vh;
+    padding: 16px;
+    background-color: var(--Grey900);
+    font-family: "Inter",serif;
+    font-optical-sizing: auto;
+    color: var(--White);
+}
+
+/* main */
+main{
+    display: grid;
+    place-items: center;
+}
+
+/* Card -start*/
+.card{
+    background: var(--Grey800);
+    border-radius: 0.7rem;
+    overflow: hidden;
+    max-width: 21rem;
+    padding: 1.5rem;
+}
+/* Card image*/
+.card-image img{
+    display: block;
+    place-self: center;
+    height: var(--image-side);
+    width: var(--image-side);
+    border-radius: var(--image-radius);
+}
+/* card content -start */
+.card-content {
+    padding-top: 1.3rem;
+    text-align: center;
+}
+/* name */
+.name{
+    font-size: var(--font-large);
+    margin-bottom: var(--line-space);
+}
+/* address */
+.address{
+    font-size: var(--font-base);
+    margin-bottom: 1.5rem;
+    color: var(--Green);
+}
+/* bio */
+.bio{
+    font-size: var(--font-base);
+    margin-bottom: var(--line-space);
+}
+/* links */
+.links li{
+    display: block;
+    background: var(--Grey700);
+    font-size: var(--font-small);
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    margin-bottom: var(--line-space);
+    border-radius: 0.2rem;
+}
+.links a{
+    text-decoration: none; 
+    color: var(--White);
+}
+.links li:hover{
+    background: var(--Green);
+}
