@@ -53,7 +53,7 @@ main{
 }
 /* Card image*/
 .card-image img{
-    display: block;
+    display: grid;
     place-self: center;
     height: var(--image-side);
     width: var(--image-side);
