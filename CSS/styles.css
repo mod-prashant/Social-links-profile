@@ -44,6 +44,10 @@ main{
 
 /* Card -start*/
 .card{
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;    /* Center align content horizontally */
+    justify-content: center;
     background: var(--Grey800);
     border-radius: 0.7rem;
     overflow: hidden;
@@ -52,9 +56,8 @@ main{
     padding: 2rem;
 }
 /* Card image*/
+
 .card-image img{
-    display: grid;
-    place-self: center;
     height: var(--image-side);
     width: var(--image-side);
     border-radius: var(--image-radius);
